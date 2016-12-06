@@ -49,7 +49,7 @@ row=DB[:conn].execute("select * from #{self.table_name} where #{attr.first.first
 end
 end
 def self.find_by_name(name)
-    sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
-    DB[:conn].execute(sql)
+  quri = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
+    DB[:conn].execute(quri)
   end
 end
